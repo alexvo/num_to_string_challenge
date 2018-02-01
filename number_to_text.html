@@ -1,0 +1,57 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Number to Text</title>
+  <meta name="description" content="Input a number, output that number spelled out.">
+  <meta name="author" content="Alex Vo">
+
+  <link rel="stylesheet" href="css/styles.css?v=1.0"> 
+  <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+  <![endif]-->
+  <script src="number_to_text.js"></script>
+  <script>
+      function isNumber(evt) {
+          evt = (evt) ? evt : window.event;
+          var charCode = (evt.which) ? evt.which : evt.keyCode;
+          if (charCode > 31 && (charCode < 48 || charCode > 57)) {
+              return false;
+          }
+          return true;
+      }
+  </script>
+
+
+</head>
+
+<body>
+
+
+
+<!-- form -->
+<form name="myForm" id="form1" action="">
+Enter an integer:<br>
+<input type="text" id ="num" value="" onkeypress="return isNumber(event)"/>
+<br><br> 
+
+
+<input type="submit" value="Convert to Text" id="myBtn" onclick="numToText(num.value)">
+
+
+
+</form>  
+
+
+
+
+<!-- textarea w answer -->
+
+
+
+
+<!--  -->
+</body>
+</html>
